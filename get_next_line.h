@@ -6,11 +6,11 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 03:54:58 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 15:50:55 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/22 00:05:16 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
 # include <unistd.h>

@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 03:25:37 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 22:56:55 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/22 00:04:20 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_reset_lstr(char *lstr)
 {
 	char	*tmp;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	while (lstr[i] != 0 && lstr[i] != '\n')
@@ -42,8 +42,8 @@ char	*ft_reset_lstr(char *lstr)
 char	*ft_get_line(char *lstr)
 {
 	char	*tmp;
-	int	i;
-	
+	int		i;
+
 	i = 0;
 	if (lstr[i] == 0)
 		return (0);
@@ -70,7 +70,7 @@ char	*ft_get_line(char *lstr)
 char	*ft_get_lstr(int fd, char *lstr)
 {
 	char	*buffer;
-	int	result;
+	int		result;
 
 	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (buffer == 0)

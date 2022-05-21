@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:25:53 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 15:53:04 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/22 00:03:14 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,8 @@ size_t	ft_strlen(const char *str)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*str;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	if (s1 == 0)
 	{
@@ -60,7 +60,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (0);
 	i = -1;
 	j = 0;
-	str = (char *)malloc(sizeof(char) * ((int)ft_strlen(s1) + (int)ft_strlen(s2) + 1));
+	str = malloc(sizeof(char) * ((int)ft_strlen(s1) + (int)ft_strlen(s2) + 1));
 	if (str == 0)
 		return (0);
 	while (s1[++i] != 0)
