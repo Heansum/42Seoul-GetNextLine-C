@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 03:54:58 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 15:25:33 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/21 15:50:55 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # include <unistd.h>
-# include <stlib.h>
+# include <stdlib.h>
 
 size_t	ft_strlen(const char *str);
 char	*ft_strchr(const char *str, int c);

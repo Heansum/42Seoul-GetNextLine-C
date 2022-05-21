@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 15:25:53 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 15:40:09 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/21 15:53:04 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *str, int c)
 	return (0);
 }
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 	size_t	cnt;
@@ -54,7 +54,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	if (s1 == 0)
 	{
 		s1 = (char *)malloc(sizeof(char) * 1);
-		s1 = '\0';
+		s1[0] = '\0';
 	}
 	if (s1 == 0 || s2 == 0)
 		return (0);

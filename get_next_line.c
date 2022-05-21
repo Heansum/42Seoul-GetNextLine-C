@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 03:25:37 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 15:20:32 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/21 22:20:59 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,17 @@ char	*ft_reset_lstr(char *lstr)
 	if (lstr[i] == 0)
 	{
 		free(lstr);
+		lstr = 0;
 		return (0);
 	}
-	tmp = (char *)malloc(sizeof(char) * ft_strlen(lstr) + 1);
+	tmp = (char *)malloc(sizeof(char) * (ft_strlen(lstr) - i + 1));
 	if (tmp == 0)
 		return (0);
 	i++;
 	j = 0;
 	while (lstr[i] != 0)
 		tmp[j++] = lstr[i++];
-	tmp[j] = '\n';
+	tmp[j] = '\0';
 	free(lstr);
 	return (tmp);
 }
@@ -54,10 +55,10 @@ char	*ft_get_line(char *lstr)
 	i = 0;
 	while (lstr[i] != 0 && lstr[i] != '\n')
 	{
-		tmp[i] == lstr[i];
+		tmp[i] = lstr[i];
 		i++;
 	}
-	if (lstr[i] = '\n')
+	if (lstr[i] == '\n')
 	{
 		tmp[i] = lstr[i];
 		i++;
@@ -72,15 +73,16 @@ char	*ft_get_lstr(int fd, char *lstr)
 	int	result;
 
 	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (buffer)
+	if (!buffer)
 		return (0);
 	result = 1;
-	while ((ft_strchr(lstr, '\n') == 0) && result != 0)
+	while (ft_strchr(lstr, '\n') == 0 && result != 0)
 	{
 		result = read(fd, buffer, BUFFER_SIZE);
 		if (result == -1)
 		{
 			free(buffer);
+			buffer = 0;
 			return (0);
 		}
 		buffer[result] = 0;
