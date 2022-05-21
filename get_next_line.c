@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/21 03:25:37 by hlim              #+#    #+#             */
-/*   Updated: 2022/05/21 22:20:59 by hlim             ###   ########.fr       */
+/*   Updated: 2022/05/21 22:56:55 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*ft_get_lstr(int fd, char *lstr)
 	int	result;
 
 	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buffer)
+	if (buffer == 0)
 		return (0);
 	result = 1;
 	while (ft_strchr(lstr, '\n') == 0 && result != 0)
